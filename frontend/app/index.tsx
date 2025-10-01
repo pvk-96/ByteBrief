@@ -79,7 +79,7 @@ export default function BitBriefHome() {
 
   const setupDefaultFeeds = async () => {
     try {
-      const response = await fetch('/api/feeds/setup-defaults', {
+      const response = await fetch(`${process.env.EXPO_PUBLIC_BACKEND_URL}/api/feeds/setup-defaults`, {
         method: 'POST',
       });
       
