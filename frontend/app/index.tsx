@@ -319,6 +319,20 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: COLORS.navy,
   },
+  manageFeedsButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: 16,
+    backgroundColor: COLORS.navy,
+  },
+  manageFeedsText: {
+    color: COLORS.lightAqua,
+    fontSize: 12,
+    fontWeight: '500',
+    marginLeft: 4,
+  },
   title: {
     fontSize: 28,
     fontWeight: 'bold',
