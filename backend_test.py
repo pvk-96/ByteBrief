@@ -120,7 +120,7 @@ class BitBriefAPITester:
         """Test adding a custom RSS feed"""
         test_feed = {
             "title": "Test RSS Feed",
-            "url": "https://rss.cnn.com/rss/edition.rss",
+            "url": "https://feeds.bbci.co.uk/news/rss.xml",
             "category": "News",
             "subcategory": "Test News",
             "description": "Test feed for API validation"
