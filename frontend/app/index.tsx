@@ -94,7 +94,7 @@ export default function BitBriefHome() {
 
   const loadFeeds = async () => {
     try {
-      const response = await fetch('/api/feeds');
+      const response = await fetch(`${process.env.EXPO_PUBLIC_BACKEND_URL}/api/feeds`);
       if (response.ok) {
         const feedData = await response.json();
         setFeeds(feedData);
@@ -106,7 +106,7 @@ export default function BitBriefHome() {
 
   const loadArticles = async (category?: string) => {
     try {
-      let url = '/api/articles?limit=20';
+      let url = `${process.env.EXPO_PUBLIC_BACKEND_URL}/api/articles?limit=20`;
       if (category && category !== 'All') {
         url += `&category=${category}`;
       }
@@ -125,7 +125,7 @@ export default function BitBriefHome() {
     try {
       setRefreshing(true);
       
-      const response = await fetch('/api/feeds/refresh-all', {
+      const response = await fetch(`${process.env.EXPO_PUBLIC_BACKEND_URL}/api/feeds/refresh-all`, {
         method: 'POST',
       });
       
