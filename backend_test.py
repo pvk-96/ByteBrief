@@ -285,16 +285,13 @@ class BitBriefAPITester:
     def test_user_interests(self):
         """Test user interests functionality"""
         # Test saving interests
-        test_interests = ["Technology", "Science"]
-        test_subcategories = ["AI", "Space", "Gadgets"]
+        test_data = {
+            "categories": ["Technology", "Science"],
+            "subcategories": ["AI", "Space", "Gadgets"]
+        }
         
         try:
-            # The API expects query parameters, not JSON body
-            params = {
-                "categories": test_interests,
-                "subcategories": test_subcategories
-            }
-            response = self.session.post(f"{BACKEND_URL}/user/interests", params=params)
+            response = self.session.post(f"{BACKEND_URL}/user/interests", json=test_data)
             if response.status_code == 200:
                 self.log_test("Save User Interests", True, "Successfully saved user interests")
             else:
