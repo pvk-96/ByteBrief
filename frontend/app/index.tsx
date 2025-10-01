@@ -190,6 +190,10 @@ export default function BitBriefHome() {
       
       {/* Header */}
       <View style={styles.header}>
+        <TouchableOpacity onPress={() => router.push('/manage-feeds')} style={styles.manageFeedsButton}>
+          <Ionicons name="settings-outline" size={20} color={COLORS.lightAqua} />
+          <Text style={styles.manageFeedsText}>Manage</Text>
+        </TouchableOpacity>
         <Text style={styles.title}>BitBrief</Text>
         <TouchableOpacity onPress={refreshAllFeeds} disabled={refreshing}>
           <Ionicons 
