@@ -1,1 +1,1 @@
-# Here are your Instructions
+# BitBrief- Your personal rss feed app
